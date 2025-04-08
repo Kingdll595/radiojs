@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Rádio Ao Vivo</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rádio Online</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #2b2b2b, #1a1a1a);
-      color: #fff;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: white;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      padding: 2rem;
     }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-
-    audio {
-      width: 300px;
-      outline: none;
-    }
-
-    .container {
+    header {
       text-align: center;
-      padding: 40px;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      margin-bottom: 2rem;
     }
-
+    header h1 {
+      font-size: 2.5rem;
+      color: #00d9ff;
+    }
+    .player {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      text-align: center;
+    }
+    .player audio {
+      width: 300px;
+      margin-top: 1rem;
+    }
     footer {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #999;
+      margin-top: 2rem;
+      font-size: 0.875rem;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🎧 Ouça Nossa Rádio Ao Vivo</h1>
+  <header>
+    <h1>🎧 Rádio Online Ao Vivo</h1>
+    <p>Conecte-se com o som que inspira seu dia</p>
+  </header>
+  <div class="player">
+    <h2>🔴 Transmissão ao Vivo</h2>
     <audio controls autoplay>
       <source src="https://nose-cancellation-lady-year.trycloudflare.com/stream" type="audio/mpeg">
       Seu navegador não suporta o player de áudio.
     </audio>
-    <footer>
-      Transmitindo com ❤️
-    </footer>
   </div>
+  <footer>
+    <p>&copy; 2025 Rádio Online - Todos os direitos reservados</p>
+  </footer>
 </body>
 </html>
